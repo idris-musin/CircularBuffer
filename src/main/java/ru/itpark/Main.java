@@ -7,7 +7,7 @@ import java.util.Queue;
 public class Main {
     public static void main(String[] args) {
 
-        CircularBuffer buffer = new CircularBuffer(5);
+        var buffer = new CircularBuffer(5);
 
         buffer.add("Madrid");
         buffer.add("Paris");
