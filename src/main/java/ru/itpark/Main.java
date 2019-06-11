@@ -16,6 +16,7 @@ public class Main {
         buffer.add("London");
         buffer.add("Rome");
         buffer.add("Minsk");
+        buffer.add("Helsinki");
 
         System.out.println(buffer.getBuffer());
     }
@@ -23,15 +24,15 @@ public class Main {
 
 class CircularBuffer {
     private String name;
-    private int maxSize = 5;
+    private int maxSize;
 
-    public CircularBuffer(int maxSize) {
+    CircularBuffer(int maxSize) {
         this.maxSize = maxSize;
     }
 
     private Queue<String> buffer = new LinkedList<>();
 
-    public void add (String city) {
+    void add(String city) {
         buffer.add(city);
         if (buffer.size() > maxSize) {
             buffer.remove();
